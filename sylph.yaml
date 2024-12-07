@@ -1,0 +1,21 @@
+project_name: sylph_example
+default_job_timeout: 30
+
+device_pools:
+  - pool_name: android_pool
+    pool_type: android
+    devices:
+      - name: Google Pixel 3
+        model: Pixel 3
+        os: Android
+        os_version: "10"
+        arn: arn:aws:devicefarm:us-west-2::device:58D6FB12B3624256AED26D0F940D4427
+
+test_suites:
+  - test_suite: example_test
+    app: build/app/outputs/apk/debug/app-debug.apk
+    test_spec: test_spec.yaml
+    device_pools:
+      - android_pool
+    job_timeout: 30
+    pool_type: android

@@ -1,0 +1,17 @@
+version: 0.1
+
+phases:
+  install:
+    commands:
+      - npm install -g appium@1.22.3
+      - npm install -g wd
+      - export PATH=$PATH:node_modules/.bin
+
+  test:
+    commands:
+      - appium --log-level info &
+      - sleep 10
+      - node test/example.js
+
+artifacts:
+  - $DEVICEFARM_LOG_DIR/**/*
