@@ -14,11 +14,11 @@ dependencies:
   args: ^2.3.0
   http: ^1.1.0
   collection: ^1.17.0
+  version: ^3.0.2
+  process: ^5.0.1
+  file: ^7.0.0
 
 dev_dependencies:
   test: ^1.21.0
   mockito: ^5.0.0
   pedantic: ^1.11.0
-
-executables:
-  sylph: main
